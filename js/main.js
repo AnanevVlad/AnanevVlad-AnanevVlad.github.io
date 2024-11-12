@@ -5,28 +5,28 @@ document.addEventListener('DOMContentLoaded', function() {
     const modulesElement = feature.querySelector('.modules');
     if (modulesElement) {
       const imgElement = document.createElement('img');
-      imgElement.src = '../img/icons/modules.svg';
+      imgElement.src = 'img/icons/modules.svg';
       modulesElement.insertBefore(imgElement, modulesElement.firstChild);
     }
   
     const timeElement = feature.querySelector('.time');
     if (timeElement) {
       const img2Element = document.createElement('img');
-      img2Element.src = '../img/icons/clock.svg';
+      img2Element.src = 'img/icons/clock.svg';
       timeElement.insertBefore(img2Element, timeElement.firstChild);
     }
   
     const onofElement = feature.querySelector('.onof');
     if (onofElement) {
       const img3Element = document.createElement('img');
-      img3Element.src = '../img/icons/display.svg';
+      img3Element.src = 'img/icons/display.svg';
       onofElement.insertBefore(img3Element, onofElement.firstChild);
     }
   
     const langElement = feature.querySelector('.lang');
     if (langElement) {
       const img4Element = document.createElement('img');
-      img4Element.src = '../img/icons/english.svg';
+      img4Element.src = 'img/icons/english.svg';
       langElement.insertBefore(img4Element, langElement.firstChild);
     }
   });
