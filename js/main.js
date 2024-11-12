@@ -57,45 +57,85 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   const accordions = document.querySelectorAll('.accordeon');
 
-  // Открыть первый аккордеон при загрузке страницы
   if (accordions.length > 0) {
     const firstAccordeon = accordions[0];
     const firstContent = firstAccordeon.querySelector('.content');
     const firstButton = firstAccordeon.querySelector('button');
+    const firstParagraphs = firstAccordeon.querySelectorAll('div > p');
     
     firstContent.style.maxHeight = firstContent.scrollHeight + 'px';
     firstContent.style.marginTop = '53px';
     firstContent.classList.add('open');
     firstButton.classList.add('open');
+    
+    firstParagraphs.forEach(paragraph => {
+      paragraph.classList.add('open');
+    });
   }
-
-  // Добавить обработчики для аккордеонов
+  
   accordions.forEach(accordeon => {
     accordeon.addEventListener('click', () => {
       const content = accordeon.querySelector('.content');
       const button = accordeon.querySelector('button');
-
+      const paragraphs = accordeon.querySelectorAll('div > p');
+      
       document.querySelectorAll('.accordeon .content').forEach(otherContent => {
         if (otherContent !== content) {
           otherContent.style.maxHeight = null;
           otherContent.style.marginTop = '0px';
           otherContent.classList.remove('open');
-
+          
           const otherButton = otherContent.closest('.accordeon').querySelector('button');
           otherButton.classList.remove('open');
+  
+          const otherParagraphs = otherContent.closest('.accordeon').querySelectorAll('div > p');
+          otherParagraphs.forEach(paragraph => {
+            paragraph.classList.remove('open');
+          });
         }
       });
-
+  
       if (content.style.maxHeight) {
         content.style.maxHeight = null;
         content.style.marginTop = '0px';
         content.classList.remove('open');
         button.classList.remove('open');
+        
+        paragraphs.forEach(paragraph => {
+          paragraph.classList.remove('open');
+        });
       } else {
         content.style.maxHeight = content.scrollHeight + 'px';
         content.style.marginTop = '53px';
         content.classList.add('open');
         button.classList.add('open');
+        
+        paragraphs.forEach(paragraph => {
+          paragraph.classList.add('open');
+        });
       }
+    });
+    document.querySelectorAll('nav > ul > li > a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        document.querySelectorAll('nav > ul > li > a').forEach(function(item) {
+          item.classList.remove('active');
+        });
+        this.classList.add('active');
+      });
+    });
+    document.querySelectorAll('.submenu a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault(); 
+    
+        const targetId = this.getAttribute('href'); 
+        const targetElement = document.querySelector(targetId); 
+    
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 150, 
+            behavior: 'smooth' 
+          });
+        }
+      });
     });
   });

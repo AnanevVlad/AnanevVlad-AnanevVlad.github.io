@@ -13,13 +13,18 @@
        <a href="#"> <img src="img/icons/Logo.svg" alt=""></a>
        <nav>
         <ul>
-            <li><a class="active" href="">Home</a></li>
-            <li>Courses <img src="img/icons/Vector 9.svg" alt=""></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Countact us</a></li>
+            <li><a class="active" href="#">Home</a></li>
+            <li>Courses <img src="img/icons/Vector 9.svg" alt="">
+              <ul class="submenu">
+                <li><a href="#firstcourse">First course</a></li>
+                <li><a href="#secondcourse">Second course</a></li>
+              </ul>
+            </li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#faq">Countact us</a></li>
         </ul>
      </nav>
-     <button class="login">Login</button>
+     <button type="button" class="login">Login</button>
     </div>
   </header>
   <section class="welcome">
@@ -54,7 +59,7 @@
     </ul>
     </div>
   </section>
-  <section class="about">
+  <section class="about" id="about">
     <div class="container">
         <div class="about_head">
             <h2>About us</h2>
@@ -84,12 +89,12 @@
         </div>
     </div>
   </section>
-  <section class="courses">
+  <section class="courses" id="course">
     <div class="container">
       <h2>Our Courses</h2>
       <ul class="courses_list">
-        <li>
-          <div class="courses_head">
+        <li >
+          <div class="courses_head" id="firstcourse">
             <img src="img/icons/star.svg" alt="">
             <h4>Level 1 (ACC Track) Experiential Executive Coaching Program
             </h4>
@@ -134,7 +139,7 @@
           <a class="join" href="">join</a>
         </li>
         <li>
-          <div class="courses_head">
+          <div class="courses_head" id="secondcourse">
             <img src="img/icons/star.svg" alt="">
             <h4>Level 2 (PCC Track) Experiential Executive Coaching Program
             </h4>
@@ -190,7 +195,7 @@
       <form action="">
         <input type="text" placeholder="Name">
         <input type="email" name="" id="" placeholder="Email">
-        <button>Schedule a call</button>
+        <button type="submit">Schedule a call</button>
       </form>
     </div>
   </section>
@@ -353,7 +358,7 @@
       </div>
     </div>
   </section>
-  <section class="faq">
+  <section class="faq" id="faq">
     <div class="container">
       <h2>faq</h2>
       <div>
@@ -361,28 +366,28 @@
           <li class="accordeon open">
             <div>
               <p>Lorem ipsum dolor sit amet consectetur. Bibendum proin</p>
-              <button class="open"></button>
+              <button type="button" class="open"></button>
             </div>
             <p class="content">Lorem ipsum dolor sit amet consectetur. Ipsum lacus nulla in eget sit. Lacus iaculis sed mollis mi massa tortor scelerisque sed amet. Turpis et sit tincidunt eget. Dolor nisl fermentum cras erat nisl facilisis. Et.</p>
           </li>
           <li class="accordeon">
             <div>
               <p>Lorem ipsum dolor sit amet consectetur. Bibendum proin</p>
-              <button ></button>
+              <button type="button" ></button>
             </div>
             <p class="content">Lorem ipsum dolor sit amet consectetur. Ipsum lacus nulla in eget sit. Lacus iaculis sed mollis mi massa tortor scelerisque sed amet. Turpis et sit tincidunt eget. Dolor nisl fermentum cras erat nisl facilisis. Et.</p>
           </li>
           <li class="accordeon">
             <div>
               <p>Lorem ipsum dolor sit amet consectetur. Bibendum proin</p>
-              <button></button>
+              <button type="button"></button>
             </div>
             <p class="content">Lorem ipsum dolor sit amet consectetur. Ipsum lacus nulla in eget sit. Lacus iaculis sed mollis mi massa tortor scelerisque sed amet. Turpis et sit tincidunt eget. Dolor nisl fermentum cras erat nisl facilisis. Et.</p>
           </li>
           <li class="accordeon">
             <div>
               <p>Lorem ipsum dolor sit amet consectetur. Bibendum proin</p>
-              <button></button>
+              <button type="button"></button>
             </div>
             <p class="content">Lorem ipsum dolor sit amet consectetur. Ipsum lacus nulla in eget sit. Lacus iaculis sed mollis mi massa tortor scelerisque sed amet. Turpis et sit tincidunt eget. Dolor nisl fermentum cras erat nisl facilisis. Et.</p>
           </li>
@@ -393,7 +398,7 @@
             <input type="text" placeholder="Name">
             <input type="email" name="" id="" placeholder="Email">
             <textarea name="" id="" cols="30" rows="10" placeholder="Enter Your Question Here ....."></textarea>
-            <button>Send your message</button>
+            <button type="submit">Send your message</button>
           </form>
         </div>
       </div>
@@ -404,9 +409,9 @@
   <div class="logo_wrapper"><a href="#"> <img src="img/icons/Logo.svg" alt=""></a></div>
       <p>© 2024 Dickens Consulting Group, LLC</p>
       <ul>
-        <li><a href="">Course</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Contact</a></li>
+        <li><a href="#course">Course</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#faq">Contact</a></li>
       </ul>
     </div>
   </footer>
